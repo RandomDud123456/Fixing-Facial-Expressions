@@ -1,0 +1,157 @@
+.
+├── Datasets
+│   ├── 3People
+│   │   ├── 8b.jpg
+│   │   ├── 8r.jpg
+│   │   ├── cluster
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   ├── cluster_eyes_csv.csv
+│   │   │   └── cluster_mouth_csv.csv
+│   │   ├── face.jpg
+│   │   ├── face_result.jpg
+│   │   └── target.jpg
+│   ├── 4N7A5148_888
+│   │   ├── 4N7A5148_888.JPG
+│   │   ├── 9b.JPG
+│   │   ├── 9r.jpg
+│   │   ├── cluster
+│   │   │   ├── 4N7A5148_3.jpg
+│   │   │   ├── 4N7A5149_4.jpg
+│   │   │   ├── 4N7A5150_2.jpg
+│   │   │   ├── 4N7A5151_3.jpg
+│   │   │   ├── 4N7A5152_4.jpg
+│   │   │   ├── 4N7A5153_3.jpg
+│   │   │   ├── 4N7A5154_5.jpg
+│   │   │   ├── 4N7A5155_0.jpg
+│   │   │   ├── 4N7A5156_4.jpg
+│   │   │   ├── 4N7A5157_5.jpg
+│   │   │   ├── cluster_eyes_csv.csv
+│   │   │   └── cluster_mouth_csv.csv
+│   │   ├── face.jpg
+│   │   └── face_result.jpg
+│   ├── 4N7A6596
+│   │   ├── 10b.JPG
+│   │   ├── 10r.jpg
+│   │   ├── 4N7A6596_934.JPG
+│   │   ├── cluster_0
+│   │   │   ├── 4N7A6596_1.jpg
+│   │   │   ├── 4N7A6597_1.jpg
+│   │   │   ├── cluster_0_eyes_csv.csv
+│   │   │   └── cluster_0_mouth_csv.csv
+│   │   └── cluster_1
+│   │       ├── 4N7A6596_0.jpg
+│   │       ├── 4N7A6597_0.jpg
+│   │       ├── cluster_1_eyes_csv.csv
+│   │       └── cluster_1_mouth_csv.csv
+│   ├── cluster_20
+│   │   ├── 292A1599_2.jpg
+│   │   ├── 292A1623_3.jpg
+│   │   ├── 292A1635_2.jpg
+│   │   ├── 292A1637_0.jpg
+│   │   ├── 292A1643_0.jpg
+│   │   ├── 292A1644_0.jpg
+│   │   ├── 292A1652_5.jpg
+│   │   ├── 292A2055_2.jpg
+│   │   ├── 292A2148_23.jpg
+│   │   ├── 292A2152_8.jpg
+│   │   ├── 292A2162_5.jpg
+│   │   ├── 292A2163_0.jpg
+│   │   ├── 292A2169_13.jpg
+│   │   ├── 292A2172_2.jpg
+│   │   ├── 292A2173_3.jpg
+│   │   ├── 292A2174_7.jpg
+│   │   ├── 292A2175_0.jpg
+│   │   ├── 292A2189_1.jpg
+│   │   ├── 292A2190_0.jpg
+│   │   ├── 292A2194_3.jpg
+│   │   ├── 292A2195_2.jpg
+│   │   ├── 292A2196_3.jpg
+│   │   ├── 292A2198_1.jpg
+│   │   ├── 292A2199_2.jpg
+│   │   ├── 292A2200_1.jpg
+│   │   ├── 292A2201_1.jpg
+│   │   ├── 292A2202_1.jpg
+│   │   ├── cluster_20_eyes_csv.csv
+│   │   ├── cluster_20_mouth_csv.csv
+│   │   ├── DSC00950_3.jpg
+│   │   ├── DSC00951_0.jpg
+│   │   ├── DSC00958_5.jpg
+│   │   ├── DSC00959_5.jpg
+│   │   ├── DSC00960_3.jpg
+│   │   ├── DSC00975_4.jpg
+│   │   ├── DSC00976_3.jpg
+│   │   ├── DSC00983_1.jpg
+│   │   ├── DSC00984_0.jpg
+│   │   ├── DSC00997_1.jpg
+│   │   ├── DSC00998_0.jpg
+│   │   ├── DSC01003_2.jpg
+│   │   ├── DSC01011_7.jpg
+│   │   ├── DSC01176_0.jpg
+│   │   ├── DSC01177_0.jpg
+│   │   ├── DSC01178_1.jpg
+│   │   ├── DSC01179_0.jpg
+│   │   ├── JAT02774_2.jpg
+│   │   └── JAT02830_2.jpg
+│   ├── DSC07323
+│   │   ├── cluster_0
+│   │   │   ├── 0.png
+│   │   │   ├── cluster_0_eyes_csv.csv
+│   │   │   └── cluster_0_mouth_csv.csv
+│   │   ├── cluster_1
+│   │   │   ├── 0.png
+│   │   │   ├── cluster_1_eyes_csv.csv
+│   │   │   └── cluster_1_mouth_csv.csv
+│   │   ├── DSC07323.JPG
+│   │   ├── DSC07325.JPG
+│   │   ├── edited_group_photo.jpg
+│   │   ├── face.jpg
+│   │   └── face_result.jpg
+│   ├── DSC08704
+│   │   ├── 11b.JPG
+│   │   ├── 11r.jpg
+│   │   ├── 127A6303.JPG
+│   │   ├── DSC08704.JPG
+│   │   └── DSC08704_result.jpg
+│   └── RCM_3899
+│       ├── 12b.jpg
+│       ├── 12r.jpg
+│       ├── RCM_3899_b.jpg
+│       ├── RCM_3899_cluster_0
+│       │   ├── RCM_3899_0.jpg
+│       │   ├── RCM_3899_cluster_0_eyes_csv.csv
+│       │   ├── RCM_3899_cluster_0_mouth_csv.csv
+│       │   └── RCM_3900_1.jpg
+│       ├── RCM_3899_cluster_2
+│       │   ├── 4N7A5155_5.jpg
+│       │   ├── 4N7A5156_6.jpg
+│       │   ├── 4N7A5157_6.jpg
+│       │   ├── 4N7A5158_1.jpg
+│       │   ├── 4N7A5159_1.jpg
+│       │   ├── 4N7A5160_0.jpg
+│       │   ├── cluster_eyes_csv.csv
+│       │   ├── cluster_mouth_csv.csv
+│       │   ├── RCM_3897_1.jpg
+│       │   ├── RCM_3898_0.jpg
+│       │   ├── RCM_3899_2.jpg
+│       │   ├── RCM_3899_cluster_2_eyes_csv.csv
+│       │   ├── RCM_3899_cluster_2_mouth_csv.csv
+│       │   ├── RCM_3900_2.jpg
+│       │   ├── RCM_4244_0.jpg
+│       │   └── RCM_4245_0.jpg
+│       └── RCM_3899_r.jpg
+├── driver.py
+├── edit_face.py
+├── eyes.txt
+├── file_structure.txt
+├── models
+│   ├── face_landmarker_v2_with_blendshapes.task
+│   └── Pytorch_RetinaFace_resnet50-640-640.onnx
+├── mouth2.txt
+├── patch_blend.py
+├── pick_best_filter_eye.py
+├── pick_best_filter_mouth.py
+├── README.md
+└── requirements.txt
+
+17 directories, 137 files

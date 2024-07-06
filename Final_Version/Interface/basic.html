@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editing Website</title>
+    <style>
+        /* General Styling */
+        body {
+            background-color: #3b3a3a;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #fff;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 1.2em;
+            height: 10vh;
+        }
+
+        .fixbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            justify-self: center;
+            flex-wrap: wrap;
+            height: 65vh;
+            width: 85vw;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            /* background-color: red; */
+            border-radius: 10px;
+            overflow-y: scroll;
+            padding: 30px;
+            scroll-behavior: smooth;
+        }
+
+        .fixbox::-webkit-scrollbar {
+            display: none;
+        }
+
+        .image-box {
+            position: relative;
+        }
+
+        .image-box img {
+            margin: 10px;
+            padding: 10px;
+            width: 350px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .greatimg {
+            position: fixed;
+            left: 8vw;
+            display: none;
+            width: 350px;
+        }
+
+        .greatimg img {
+            width: 37vw;
+            position: absolute;
+            bottom: 50%;
+            object-fit: contain;
+            aspect-ratio: 1/1;
+        }
+
+        .popup-box {
+            position: fixed;
+            top: 15vh;
+            right: -100vw;
+            width: 30vw;
+            height: 78vh;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            overflow-y: scroll;
+            transition: right 0.5s ease-in-out;
+        }
+
+        .inner-images {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-self: flex-start;
+            justify-self: flex-start;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            max-height: 180px;
+            height: 0;
+            transition: height 0.5s ease-in-out;
+        }
+
+        .inner-images::-webkit-scrollbar {
+            display: none;
+        }
+
+        .inner-images img {
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .inner-images::-webkit-scrollbar {
+            display: none;
+        }
+
+        .small-img {
+            display: flex;
+        }
+
+        .pop-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: center;
+            justify-self: center;
+            padding: 0 50px 0 10px;
+        }
+
+        .pop-includer {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        .pop-includer li {
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        #close-btn {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .small-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Fix Facial Expression</h1>
+    </header>
+    <div class="fixbox" id="fixbox">
+
+    </div>
+
+    <div class="greatimg" id="greatimg">
+        <img src="example1.jpeg" alt="Image 1" id="bigimg">
+    </div>
+
+    <div class="popup-box" id="deo">
+        <div class="pop-head">
+            <h2>People Faces</h2>
+            <button onclick="closeme()" id="close-btn">Close</button>
+        </div>
+        <ul class="main-pop" id="main-pop">
+            <div id = "targetdiv">
+                <li>Target Image</li>
+                <img src="example1.jpeg" alt="main image" class="small-image" id="target" onclick="get_img(this)">
+            </div>
+            <div id = "eyesdiv">
+                <li>Corrected_Eyes</li>
+                <img src="example1.jpeg" alt="main image" class="small-image" id="eyes" onclick="get_img(this)">
+            </div>
+            <div id = "mouthdiv">
+                <li>Corrected_Mouth</li>
+                <img src="example1.jpeg" alt="main image" class="small-image" id="mouth" onclick="get_img(this)">
+            </div>
+            <div id = "resultdiv">
+                <li>Result</li>
+                <img src="example1.jpeg" alt="main image" class="small-image" id="result" onclick="get_img(this)">
+            </div>
+
+        </ul>
+        </li>
+        </ul>
+    </div>
+
+    <script>;
+        let i = 1
+        for (i = 1; i < 12; i++) {
+            document.getElementById('fixbox').innerHTML += `
+            <div class="image-box">
+            <img src="/Database/`+ i + `b.jpg" alt="` + i + `" onclick="showpop(this)"                                                                                                                                                                                              />
+            </div>
+            `
+        }
+        function openit(getter) {
+            if (document.getElementById(getter).style.height === "180px") {
+                document.getElementById(getter).style.height = '0';
+                return;
+            }
+            document.getElementById(getter).style.height = '180px';
+        }
+        function showpop(elem) {
+            document.getElementById('greatimg').style.display = 'block';
+            document.getElementById('bigimg').src = elem.src;
+            let num = elem.alt;
+            document.getElementById('eyes').src = `/Database/` + num + `r_e.jpeg`;
+            var imageUrl = `/Database/` + num + `r_e.jpeg`;
+            checkImage(imageUrl, function(exists) {
+                console.log('Image exists:', exists);
+                if(exists){
+                    document.getElementById('eyes').src = `/Database/` + num + `r_e.jpeg`;
+                    document.getElementById('eyesdiv').style.display = "block";
+                }
+                else{
+                    document.getElementById('eyesdiv').style.display = "none";
+                }
+            });
+            document.getElementById('mouth').src = `/Database/` + num + `r_m.jpeg`;
+            var imageUrl = `/Database/` + num + `r_m.jpeg`;
+            checkImage(imageUrl, function(exists) {
+                console.log('Image exists:', exists);
+                if(exists){
+                    document.getElementById('mouth').src = `/Database/` + num + `r_m.jpeg`;
+                    document.getElementById('mouthdiv').style.display = "block";
+                }
+                else{
+                    document.getElementById('mouthdiv').style.display = "none";
+                }
+            });
+            document.getElementById('result').src = `/Database/` + num + `r.jpeg`;
+            document.getElementById('target').src = `/Database/` + num + `t.jpg`;
+            var imageUrl = `/Database/` + num + `t.jpg`;
+            checkImage(imageUrl, function(exists) {
+                console.log('Image exists:', exists);
+                if(exists){
+                    document.getElementById('target').src = `/Database/` + num + `t.jpg`;
+                    document.getElementById('targetdiv').style.display = "block";
+                }
+                else{
+                    document.getElementById('targetdiv').style.display = "none";
+                }
+            });
+            document.getElementById('deo').style.right = '2vw';
+            document.getElementById('fixbox').style.filter = 'blur(20px)';
+            document.getElementById('fixbox').style.transition = 'filter 0.5s ease-in-out';
+            document.getElementById('fixbox').style.pointerEvents = 'none';
+        }
+
+        function closeme() {
+            document.getElementById('greatimg').style.display = 'none';
+            document.getElementById('deo').style.right = '-100vw';
+            document.getElementById('fixbox').style.filter = 'none';
+            document.getElementById('fixbox').style.pointerEvents = 'all';
+        }
+
+        function changeBig(elem) {
+            document.getElementById('bigimg').src = elem.alt;
+        }
+
+        function get_img(elem) {
+            document.getElementById('bigimg').src = elem.src;
+
+        }
+        function checkImage(url, callback) {
+        var img = new Image();  // Create a new Image object
+        img.onload = function() {
+            callback(true);  // Image exists and is loaded
+        };
+        img.onerror = function() {
+            callback(false);  // Image does not exist or could not be loaded
+        };
+        img.src = url;  // Set the source of the image
+    }
+
+    </script>
+</body>
+
+</html>
